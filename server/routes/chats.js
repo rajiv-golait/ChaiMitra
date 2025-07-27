@@ -1,7 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const { Firestore } = require('@google-cloud/firestore');
-const firestore = new Firestore();
+const admin = require('firebase-admin');
+
+// Initialize Firebase Admin if not already initialized
+if (!admin.apps.length) {
+  admin.initializeApp({
+    // Firebase will use environment variables for configuration in production
+    credential: admin.credential.applicationDefault()
+  });
+}
+
+const db = admin.firestore();
 const chatSchema = require('../models/chat');
 
 // Create a new chat
@@ -20,7 +29,7 @@ router.post('/', async (req, res) => {
       timestamp: new Date(),
     };
 
-    const docRef = await firestore.collection('chats').add(newChat);
+    const docRef = await db.collection('chats').add(newChat);
     res.status(201).json({ id: docRef.id, ...newChat });
   } catch (error) {
     res.status(500).json({ message: error.message });
