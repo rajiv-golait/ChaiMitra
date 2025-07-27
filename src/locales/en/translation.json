@@ -1,0 +1,10 @@
+{
+  "dashboard_overview": "Dashboard Overview",
+  "browse_products": "Browse Products",
+  "my_orders": "My Orders",
+  "group_orders": "Group Orders",
+  "digital_wallet": "Digital Wallet",
+  "deals": "Deals",
+  "welcome_vendor": "Welcome, {{name}}! 👋",
+  "logout": "Logout"
+}
