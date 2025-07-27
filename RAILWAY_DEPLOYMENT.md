@@ -49,9 +49,12 @@ git push origin main
 4. Railway will automatically detect it as a Node.js project
 
 ### Step 3: Configure Environment Variables
+🔐 **IMPORTANT: Never commit your .env file! It contains sensitive credentials.**
+
 1. In your Railway project dashboard, go to **Variables** tab
 2. Add all the environment variables listed above
-3. Use the values from your local `.env` file
+3. Use the values from your local `.env` file (NOT the .env.example)
+4. Copy each variable name and value individually into Railway's interface
 
 ### Step 4: Configure Firebase Admin
 For server-side Firebase operations, you'll need to:
