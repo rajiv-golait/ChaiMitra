@@ -7,7 +7,6 @@ import {
   ClockIcon, 
   UsersIcon, 
   TruckIcon,
-  StarIcon,
   PlayIcon,
   CodeBracketIcon,
   FireIcon,

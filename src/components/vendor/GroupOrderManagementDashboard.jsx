@@ -11,7 +11,6 @@ import { useGroupOrders } from '../../hooks/useGroupOrders';
 
 // Icons
 import {
-  PlusIcon,
   ShareIcon,
   ChevronDownIcon,
   CheckCircleIcon,

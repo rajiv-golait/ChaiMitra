@@ -24,7 +24,7 @@ import SupplierGroupOrders from '../components/supplier/SupplierGroupOrders';
 import { useTranslation } from '../hooks/useTranslation';
 
 const SupplierDashboard = () => {
-  const { currentUser } = useAuth();
+  useAuth();
   const navigate = useNavigate();
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('overview');
